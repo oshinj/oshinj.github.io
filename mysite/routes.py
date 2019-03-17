@@ -5,6 +5,6 @@ from mysite import app
 def index() :
     return render_template('home.html')
 
-@app.route("/hello<string:name>/")
-def hello(name) :
-    return render_template('hello.html', name=name)
+# @app.route("/hello<string:name>/")
+# def hello(name) :
+#     return render_template('hello.html', name=name)

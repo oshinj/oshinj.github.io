@@ -1,6 +1,6 @@
 import os
 
-REPO_NAME = "personal_website_OshinJ"
+REPO_NAME = "oshinj.github.io"
 DEBUG = True
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -12,5 +12,5 @@ PROJECT_ROOT = parent_dir(APP_DIR)
 
 FREEZER_DESTINATION = PROJECT_ROOT
 
-FREEZER_BASE_URL = "http://localhost/{0}".format(REPO_NAME)
+FREEZER_BASE_URL = "http://localhost/{0}"
 FREEZER_REMOVE_EXTRA_FILES = False

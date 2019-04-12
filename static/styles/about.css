@@ -13,7 +13,7 @@ h1  {
   background: linear-gradient(#77EED8 0%, #000000 120%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 20vh;
+  font-size: 15vh;
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -54,30 +54,10 @@ li.navBarItem a.navBarItem:hover {
   color: #000000
 }
 
-.socialMedia {
-  display: flex;
+.bio {
   text-align: center;
-  list-style-type: none;
-  overflow: hidden;
-  align-items: center;
-  padding-left: 0;
-  /* width: 22vw; */
-  width: 15vw;
+  width: 50vw;
+  height: 50vh;
   margin: auto;
-}
-
-li.socMediaItem {
-  display: inline-block;
-}
-
-a.socMediaItem {
-  text-align: cener;
-  text-decoration: none;
-}
-
-li img {
-  height: 7vh;
-  width: 7vh;
-  display: inline-block;
-  padding: 2vw;
+  margin-top: 5vh;
 }

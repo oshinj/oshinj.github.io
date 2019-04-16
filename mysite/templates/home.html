@@ -11,13 +11,14 @@
       <li class = "navBarItem"><a class = "navBarItem" href="{{url_for('home')}}">Home</a></li>
       <li class = "navBarItem"><a class = "navBarItem" href="{{url_for('projects')}}">Projects</a></li>
       <li class = "navBarItem"><a class = "navBarItem" href="{{url_for('about')}}">About</a></li>
+      <li class = "navBarItem"><a class= "navBarItem" href="../static/pdfs/Resume.pdf" target= '_blank_'>Resume</a></li>
     </ul>
     <div>
       <h1><i>Oshin Joshi</i></h1>
+      <br/>
       <ul class = "socialMedia">
-        <li class = "socMedItem"><a class= "socMedItem" href="https://www.linkedin.com/in/oshinjoshi/" target="_blank_"><img src="{{url_for('static', filename='images/linkedin.png')}}" alt="LinkedIn"></a></li>
-        <!-- <li class = "socMedItem"><a class= "socMedItem" href="../static/Resume--OshinJoshi.pdf" target="_blank_"><img src="{{url_for('static', filename='images/resume.png')}}" alt="Resume"></a></li> -->
-        <li class = "socMedItem"><a class= "socMedItem" href="https://www.github.com/oshinj/" target="_blank_"><img src="{{url_for('static', filename='images/github.png')}}" alt="GitHub"></a></li>
+        <li class = "socMedItem"><a class= "socMedItem" href="https://www.linkedin.com/in/oshinjoshi/" target="_blank_"><img class= "socMedItem" src="{{url_for('static', filename='images/linkedin.png')}}" alt="LinkedIn"></a></li>
+        <li class = "socMedItem"><a class= "socMedItem" href="https://www.github.com/oshinj/" target="_blank_"><img class= "socMedItem" src="{{url_for('static', filename='images/github.png')}}" alt="GitHub"></a></li>
       </ul>
     </div>
   </body>

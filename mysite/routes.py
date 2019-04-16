@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 from mysite import app
 
 @app.route("/")
@@ -12,7 +12,3 @@ def projects() :
 @app.route("/about/")
 def about() :
     return render_template('about.html')
-
-# @app.route("/hello<string:name>/")
-# def hello(name) :
-#     return render_template('hello.html', name=name)

@@ -1,5 +1,14 @@
 body {
-  background: #000000;
+  background-color: #050C26;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
+  /* background: #000000; */
   /* background: linear-gradient(#04619f 0%, #000000 120%); */
   padding: 0;
   margin: 0;
@@ -15,7 +24,21 @@ h1  {
   -webkit-text-fill-color: transparent;
   font-size: 20vh;
   padding-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: 5vh;
+
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeicon {
+  0% { opacity:0; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 
 .navBar {
@@ -26,6 +49,9 @@ h1  {
   padding-bottom: 2.5vh;
   padding-left: 0;
   overflow: hidden;
+
+  animation-name: fadeicon;
+  animation-duration: 5s;
   /* background: #E2D5E6; */
   /* background: linear-gradient(#E2D5E6 0%, #000000 120%); */
   /* box-shadow: 0px 0px 8px 2px #2F4353; */
@@ -40,24 +66,27 @@ a.navBarItem {
   font-size: 2.5vh;
   text-align: center;
   text-decoration: none;
-  padding: 3vh 3vw;
+  padding: 1.5vh 1.5vw;
 }
 
 li.navBarItem a.navBarItem:hover {
   background-color: #dbfdff;
-  color: #000000
+  transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -webkit-transition: background .5s ease-in-out;
+  color: #000000;
+  border-radius: 10%;
 }
 
 .socialMedia {
   display: flex;
-  text-align: center;
   list-style-type: none;
   overflow: hidden;
-  align-items: center;
-  padding-left: 0;
-  width: 12vw;
-  height: 10vh;
-  margin: auto;
+  justify-content: center;
+  animation-name: fadeicon;
+  animation-duration: 3s;
+  margin: 0;
+  padding: 0;
 }
 
 li.socMediaItem {
@@ -73,7 +102,6 @@ img.socMedItem {
   height: 7vh;
   width: 7vh;
   display: inline-block;
-  margin-left: 2vw;
   border-radius: 50%;
   /* box-shadow: 0px 0px 6px 1px #C0C0C0; */
 }

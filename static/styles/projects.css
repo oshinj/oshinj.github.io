@@ -1,10 +1,20 @@
 body {
-  background: #000000;
+  /* background: #000000; */
   /* background: linear-gradient(#04619f 0%, #000000 120%); */
+  background-color: #07370F;
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
   padding: 0;
   margin: 0;
   height:100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 h1  {
@@ -18,6 +28,10 @@ h1  {
   margin-top: 0;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 p {
   text-align: center;
   color: #dbfdff;
@@ -28,10 +42,11 @@ p {
   text-align: center;
   list-style-type: none;
   margin-top: 3vh;
-  padding-top: 2.5vh;
-  padding-bottom: 2.5vh;
+  padding-top: 3.5vh;
+  padding-bottom: 3.5vh;
   padding-left: 0;
   overflow: hidden;
+
   /* background: #E2D5E6; */
   /* background: linear-gradient(#E2D5E6 0%, #000000 120%); */
   /* box-shadow: 0px 0px 8px 2px #2F4353; */
@@ -46,17 +61,20 @@ a.navBarItem {
   font-size: 2.5vh;
   text-align: center;
   text-decoration: none;
-  padding: 3vh 3vw;
+  padding: 1.5vh 1.5vw;
 }
 
 li.navBarItem a.navBarItem:hover {
   background-color: #dbfdff;
-  color: #000000
+  transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -webkit-transition: background .5s ease-in-out;
+  color: #000000;
+  border-radius: 10%;
 }
 
 img.htin {
-  width: 300px;
-  height: 150px;
+  max-width: 17vw;
   padding: 4vw;
   float: left;
 }
@@ -70,8 +88,7 @@ p.description {
 }
 
 img.athhap {
-  width: 300px;
-  height: 600px;
+  max-height: 17vw;
   padding: 4vw;
   float: right;
 }

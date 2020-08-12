@@ -7,6 +7,7 @@
   </head>
   <header></header>
   <body>
+
     <ul class = "navBar">
       <li class = "navBarItem"><a class = "navBarItem" href="/">Home</a></li>
       <li class = "navBarItem"><a class = "navBarItem" href="/projects/">Projects</a></li>
@@ -14,29 +15,81 @@
       <li class = "navBarItem"><a class= "navBarItem" href="../static/pdfs/CV.pdf" target= '_blank_'>CV</a></li>
     </ul>
     <h1>Projects</h1>
-    <div class= "htin">
-      <a href="https://help-those-in-need.firebaseapp.com" target="_blank_"><img class = "htin" src="/static/images/help-those-in-need.png" alt="Help-Those-In-Need"></a>
-      <p class = description>
-        This project was an idea that was expanded on in a group setting in a project class at UCSB.
-        The site hopes to serve as a method for people who donate and those that need donations to
-        inspire more human connection in the world. It also hopes to give organizations that may not
-        have the resources to create their own site a platform in which to advertise and inform others
-        of their organization. Future plans include building in a donator profile option as well as
-        location and item based services. We also hope to reach out to and build partnerships with
-        organizations. In creating the site, we used Javascript and React.js in conjunction with Firebase
-        Database, Hosting, and Authentication services.
-      </p>
+        <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+       <!-- Full-width images with number and caption text -->
+       <div class="mySlides fade">
+         <img src="/static/images/help-those-in-need.png" style="height: 40vh; display: block; margin: auto;" alt="Help Those In Need">
+       </div>
+       <p class="text">
+         "Help Those In Need" was an idea that was expanded on in a group setting in a project class at UCSB.
+         The site hopes to serve as a method for people who donate and those that need donations to
+         inspire more human connection in the world. It also hopes to give organizations that may not
+         have the resources to create their own site a platform in which to advertise and inform others
+         of their organization. Future plans include building in a donator profile option as well as
+         location and item based services. We also hope to reach out to and build partnerships with
+         organizations. In creating the site, we used Javascript and React.js in conjunction with Firebase
+         Database, Hosting, and Authentication services.
+       </p>
+
+       <div class="mySlides fade">
+         <img src="/static/images/Happiness.png" style="height: 40vh; display: block; margin: auto;" alt="The Little Things">
+       </div>
+       <p class="text">
+         "The Little Things" was conceptualized at Athena Hacks 2019 at the University of Southern
+         California (USC). It is a mobile application developed with Android Studio using Java.
+         Future goals for the project include implementing functionality with an online database
+         service. The app aims to allow users to record small daily experiences that made them happy
+         with a few key words and a picture, and then allow users to draw upon those experiences on
+         bad days in hopes of helping them cheer up.
+       </p>
+
+       <!-- Next and previous buttons -->
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <div class = "athhap">
-      <img class = "athhap" src="/static/images/Happiness.png" alt="Athena's Happiness">
-      <p class = description>
-        "The Little Things" was conceptualized at Athena Hacks 2019 at the University of Southern
-        California (USC). It is a mobile application developed with Android Studio using Java.
-        Future goals for the project include implementing functionality with an online database
-        service. The app aims to allow users to record small daily experiences that made them happy
-        with a few key words and a picture, and then allow users to draw upon those experiences on
-        bad days in hopes of helping them cheer up.
-      </p>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+     <span class="dot" onclick="currentSlide(1)"></span>
+     <span class="dot" onclick="currentSlide(2)"></span>
     </div>
+
   </body>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var descriptions = document.getElementsByClassName("text");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+          descriptions[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      descriptions[slideIndex-1].style.display = "block";
+    }
+  </script>
 </html>
